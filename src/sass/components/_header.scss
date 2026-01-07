@@ -1,0 +1,226 @@
+@use "./../utils/mixins" as *;
+
+.header {
+  padding-top: 10px;
+  background-color: #f5f5f5;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  @include laptop {
+    padding-top: 32px;
+  }
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.logo__link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: 0.02em;
+  color: #4ba586;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+
+  @include laptop {
+    width: auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-right: 32px;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    gap: 48px;
+  }
+
+  &__link {
+    padding: 5px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144%;
+    letter-spacing: 0.03em;
+    color: #8e8e8e;
+    position: relative;
+    transition: color 0.3s ease;
+
+    @include laptop {
+      padding: 8px 3px;
+    }
+
+    &::after {
+      content: "";
+      border-radius: 100%;
+      background-color: #69b99d;
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+      bottom: -3px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:hover {
+      color: #69b99d;
+    }
+  }
+}
+
+.sidebar {
+  &__item {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__link {
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144%;
+    letter-spacing: 0.03em;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease;
+    width: 100%;
+    background-color: rgba(235, 235, 235, 0.719);
+
+    &:hover {
+      background-color: rgb(223, 223, 223);
+    }
+  }
+}
+
+.sidebar.is-active {
+  display: flex;
+}
+
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 280px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-active {
+  transform: translateX(0);
+}
+
+#js-menu-close {
+  align-self: flex-end;
+  margin: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  border: 2px solid #69b99d;
+  border-radius: 25%;
+
+  @include tablet {
+    width: 45px;
+    height: 45px;
+  }
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.close-button {
+  @include tablet {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.authorization {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+
+  @include tablet {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  @include laptop {
+    width: auto;
+    margin-top: 0;
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    border: 0;
+    background-color: #f5f5f5;
+    color: #69b99d;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #69b99d;
+      color: #fff;
+    }
+
+    @include tablet {
+      padding: 16px 48px;
+      width: 150px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "./../utils/mixins" as *;
+
+.advante {
+  padding: 80px 0;
+  scroll-margin-top: 80px;
+
+  &__title {
+    margin: 16px 0 48px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+    color: #054457;
+
+    @include laptop {
+      font-size: 48px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 280px;
+
+    @include laptop {
+      width: 376px;
+    }
+
+    &__wrapper {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__title {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 136%;
+      letter-spacing: 0.02em;
+      color: #054457;
+    }
+  }
+
+  &__sub-headline {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #73788c;
+  }
+}

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mulih - Real Estate</title>
+    <meta
+      name="description"
+      content="Let's hunt for your dream residence. Explore our range of beautiful properties with the addition of separate accommodation suitable for you."
+    />
+    <link rel="icon" type="image/png" href="public/logo.svg" />
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="https://www.google.com/" class="logo__link"
+            ><img
+              src="public/logo.svg"
+              alt="logo"
+              class="logo"
+              width="40"
+              height="40"
+            />Mulih</a
+          >
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a href="#home" class="navigation__link">Home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#property" class="navigation__link">Property</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#service" class="navigation__link">Service</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#about" class="navigation__link">About</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#contact" class="navigation__link">Contact</a>
+            </li>
+          </ul>
+          <button class="menu-button" id="js-menu-open" type="button">
+            <img
+              src="./public/icons/menu.svg"
+              alt="menu"
+              width="26"
+              height="26"
+            />
+          </button>
+          <div class="mobile-menu" id="js-mobile-menu">
+            <button class="close-button" id="js-menu-close" type="button">
+              <img
+                src="./public/icons/close.svg"
+                alt="close"
+                width="26"
+                height="26"
+              />
+            </button>
+            <ul class="sidebar">
+              <li class="sidebar__item">
+                <a href="#home" class="sidebar__link">Home</a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#property" class="sidebar__link">Property</a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#service" class="sidebar__link">Service</a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#about" class="sidebar__link">About</a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#contact" class="sidebar__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="authorization">
+            <li class="authorization__item">
+              <button type="button" class="authorization__button">
+                Sign In
+              </button>
+            </li>
+            <li class="authorization__item">
+              <button type="button" class="authorization__button">Login</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <span class="label">REAL ESTATE</span>
+          <img
+            class="hero__img"
+            src="src/images/bg/bg.webp"
+            alt="bg"
+            width="400"
+            height="400"
+            fetchpriority="high"
+          />
+          <h1 class="title">Let's hunt for your dream residence</h1>
+          <p class="sub-headline">
+            Explore our range of beautiful properties with the addition of
+            separate accommodation suitable for you.
+          </p>
+          <div class="tab">
+            <input
+              class="tab__radio"
+              id="tab-btn-1"
+              name="tab-btn"
+              type="radio"
+              value=""
+              hidden
+            />
+            <label class="tab__label" for="tab-btn-1">Buy</label>
+            <input
+              class="tab__radio"
+              id="tab-btn-2"
+              name="tab-btn"
+              type="radio"
+              value=""
+              hidden
+            />
+            <label class="tab__label" for="tab-btn-2">Rent</label>
+            <div class="tab__content" id="content-1">
+              <form class="form">
+                <div class="tab__select__wrapper">
+                  <label for="location-select" class="tab__select__label"
+                    >Location</label
+                  >
+                  <select
+                    class="tab__select"
+                    name="location"
+                    id="location-select"
+                  >
+                    <option class="tab__option">Bogor, Java Barat</option>
+                    <option class="tab__option">Paris, France</option>
+                    <option class="tab__option">Rome, Italy</option>
+                  </select>
+                </div>
+                <div class="tab__select__wrapper">
+                  <label for="type-select" class="tab__select__label"
+                    >Type</label
+                  >
+                  <select class="tab__select" name="type" id="type-select">
+                    <option class="tab__option" value="">House</option>
+                    <option class="tab__option" value="">Apartment</option>
+                    <option class="tab__option" value="">Hotel</option>
+                  </select>
+                </div>
+
+                <div class="tab__select__wrapper">
+                  <label for="price-select" class="tab__select__label"
+                    >Price Range</label
+                  >
+                  <select class="tab__select" name="price" id="price-select">
+                    <option class="tab__option" value="">$200 - $350</option>
+                    <option class="tab__option" value="">$350 – $500</option>
+                    <option class="tab__option" value="">$500 – $650</option>
+                  </select>
+                </div>
+
+                <input class="tab__button" type="submit" value="Search" />
+              </form>
+            </div>
+            <div class="tab__content" id="content-2">
+              <form class="form">
+                <div class="tab__select__wrapper">
+                  <label for="2-location-select" class="tab__select__label"
+                    >Location</label
+                  >
+                  <select
+                    class="tab__select"
+                    name="location"
+                    id="2-location-select"
+                  >
+                    <option class="tab__option" value="">
+                      Bogor, Java Barat
+                    </option>
+                    <option class="tab__option" value="">Paris, France</option>
+                    <option class="tab__option" value="">Rome, Italy</option>
+                  </select>
+                </div>
+
+                <div class="tab__select__wrapper">
+                  <label for="2-type-select" class="tab__select__label"
+                    >Type</label
+                  >
+                  <select class="tab__select" name="type" id="2-type-select">
+                    <option class="tab__option" value="">House</option>
+                    <option class="tab__option" value="">Apartment</option>
+                    <option class="tab__option" value="">Hotel</option>
+                  </select>
+                </div>
+
+                <div class="tab__select__wrapper">
+                  <label for="2-price-select" class="tab__select__label"
+                    >Price Range</label
+                  >
+                  <select class="tab__select" name="price" id="2-price-select">
+                    <option class="tab__option" value="">$200 - $350</option>
+                    <option class="tab__option" value="">$350 – $500</option>
+                    <option class="tab__option" value="">$500 – $650</option>
+                  </select>
+                </div>
+
+                <input class="tab__button" type="submit" value="Search" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="discover" id="property">
+        <div class="container">
+          <span class="label">DISCOVER</span>
+          <h2 class="discover__title">Best recommendation</h2>
+          <div class="discover__link__wrapper">
+            <p class="discover__sub-headline">
+              Discover our exclusive selection of the finest one-of-a-kind
+              luxury properties architectural masterpieces.
+            </p>
+            <a class="link-learn_more" href="#"
+              >Learn More
+              <svg
+                class="link-arrow"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="36" cy="36" r="36" fill="#6FC3A3" />
+                <path
+                  d="M31 24L43 36L31 48"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <ul class="discover__list">
+            <li class="discover__item">
+              <div class="discover__item__wrapper">
+                <img
+                  src="src/images/residences/residence1.webp"
+                  alt="Residence"
+                  class="discover__img"
+                  width="400"
+                  height="400"
+                />
+                <h3 class="discover__name discover__text">Perum griya asri</h3>
+                <p class="discover__place discover__text">Bogor, Jawa Barat</p>
+                <div class="discover__info">
+                  <p class="discover__price discover__text">$25,000</p>
+                  <div class="discover__info__wrapper">
+                    <span class="discover__area discover__text"
+                      >360m<sup class="discover__text">2</sup></span
+                    >
+                    <p class="discover__type discover__text">Living area</p>
+                  </div>
+                </div>
+                <button class="discover__button" type="button">
+                  Send Inquiry
+                </button>
+              </div>
+            </li>
+            <li class="discover__item">
+              <div class="discover__item__wrapper">
+                <img
+                  src="src/images/residences/residence2.webp"
+                  alt="Residence"
+                  class="discover__img"
+                  width="400"
+                  height="400"
+                />
+                <h3 class="discover__name discover__text">
+                  Perum kencana asri
+                </h3>
+                <p class="discover__place discover__text">Paris, France</p>
+                <div class="discover__info">
+                  <p class="discover__price discover__text">$35,000</p>
+                  <div class="discover__info__wrapper">
+                    <span class="discover__area discover__text"
+                      >360m<sup class="discover__text">2</sup></span
+                    >
+                    <p class="discover__type discover__text">Living area</p>
+                  </div>
+                </div>
+                <button class="discover__button" type="button">
+                  Send Inquiry
+                </button>
+              </div>
+            </li>
+            <li class="discover__item">
+              <div class="discover__item__wrapper">
+                <img
+                  src="src/images/residences/residence3.webp"
+                  alt="Residence"
+                  class="discover__img"
+                  width="400"
+                  height="400"
+                />
+                <h3 class="discover__name discover__text">Perum rakjel elit</h3>
+                <p class="discover__place discover__text">Rome, Italy</p>
+                <div class="discover__info">
+                  <p class="discover__price discover__text">$40,000</p>
+                  <div class="discover__info__wrapper">
+                    <span class="discover__area discover__text"
+                      >360m<sup class="discover__text">2</sup></span
+                    >
+                    <p class="discover__type discover__text">Living area</p>
+                  </div>
+                </div>
+                <button class="discover__button" type="button">
+                  Send Inquiry
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="advante" id="service">
+        <div class="container">
+          <span class="label">OUR ADVANTE</span>
+          <h2 class="advante__title">Giving you peace of mind</h2>
+          <ul class="advante__list">
+            <li class="advante__item">
+              <div class="advante__item__wrapper">
+                <img
+                  src="public/icons/list_heart.svg"
+                  alt="Heart"
+                  width="54"
+                  height="54"
+                  class="advante__img"
+                />
+                <h3 class="advante__item__title">Comfortable</h3>
+                <p class="advante__sub-headline">
+                  Enjoy lifestyle amenities designed to provide every homeowners
+                  modern comfort, a stone's throw away from schools, churches,
+                  and hospitals.
+                </p>
+              </div>
+            </li>
+            <li class="advante__item">
+              <div class="advante__item__wrapper">
+                <img
+                  src="public/icons/list_shield.svg"
+                  alt="Shield"
+                  width="54"
+                  height="54"
+                />
+                <h3 class="advante__item__title">Extra security</h3>
+                <p class="advante__sub-headline">
+                  You can connect with potential tenants without having to share
+                  your phone number. We also require all users to register to
+                  validate their legitimacy.
+                </p>
+              </div>
+            </li>
+            <li class="advante__item">
+              <div class="advante__item__wrapper">
+                <img
+                  src="public/icons/list_star.svg"
+                  alt="Star"
+                  width="54"
+                  height="54"
+                />
+                <h3 class="advante__item__title">Luxury</h3>
+                <p class="advante__sub-headline">
+                  Find out how we provide the highest standard of professional
+                  property management to give you all the benefits of property.
+                </p>
+              </div>
+            </li>
+            <li class="advante__item">
+              <div class="advante__item__wrapper">
+                <img
+                  src="public/icons/list_ticket.svg"
+                  alt="Ticket"
+                  width="54"
+                  height="54"
+                />
+                <h3 class="advante__item__title">Best price</h3>
+                <p class="advante__sub-headline">
+                  Not sure what you should be charging for your property? Let us
+                  do the numbers for you—contact us today for a free rental
+                  appraisal on your home.
+                </p>
+              </div>
+            </li>
+            <li class="advante__item">
+              <div class="advante__item__wrapper">
+                <img
+                  src="public/icons/list_location.svg"
+                  alt="Location"
+                  width="54"
+                  height="54"
+                />
+                <h3 class="advante__item__title">Strategic location</h3>
+                <p class="advante__sub-headline">
+                  Located in the city center close to the shopping center. Very
+                  good for areas surrounded by international education centers,
+                  start-up office centers.
+                </p>
+              </div>
+            </li>
+            <li class="advante__item">
+              <div class="advante__item__wrapper">
+                <img
+                  src="public/icons/list_graph.svg"
+                  alt="Graph"
+                  width="54"
+                  height="54"
+                />
+                <h3 class="advante__item__title">Efficient</h3>
+                <p class="advante__sub-headline">
+                  Schedule visits to multiple properties at once in one day
+                  without having to call them one by one. Check everything and
+                  find the best properties for rent.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__wrapper">
+            <div class="about__reviews">
+              <img
+                src="src/images/residences/residence-inside.webp"
+                alt="Residence-inside"
+                width="609"
+                height="475"
+                class="rating-image"
+              />
+              <div class="rating-badge">
+                <div class="rating-badge__wrapper">
+                  <img
+                    class="rating-badge__icon"
+                    src="public/icons/tick_square.svg"
+                    alt="Tick square"
+                    width="32"
+                    height="32"
+                  />
+                  <span class="rating-badge__score">4.8</span>
+                  <ul class="rating-badge__stars">
+                    <li class="rating-badge__star">
+                      <img
+                        src="public/icons/star_rating.svg"
+                        alt="Star"
+                        width="18"
+                        height="18"
+                      />
+                    </li>
+                    <li class="rating-badge__star">
+                      <img
+                        src="public/icons/star_rating.svg"
+                        alt="Star"
+                        width="18"
+                        height="18"
+                      />
+                    </li>
+                    <li class="rating-badge__star">
+                      <img
+                        src="public/icons/star_rating.svg"
+                        alt="Star"
+                        width="18"
+                        height="18"
+                      />
+                    </li>
+                    <li class="rating-badge__star">
+                      <img
+                        src="public/icons/star_rating.svg"
+                        alt="Star"
+                        width="18"
+                        height="18"
+                      />
+                    </li>
+                    <li class="rating-badge__star">
+                      <img
+                        src="public/icons/star_rating.svg"
+                        alt="Star"
+                        width="18"
+                        height="18"
+                      />
+                    </li>
+                  </ul>
+                  <p class="rating-badge__label">Trusted on</p>
+                  <p class="rating-badge__reviews">500+ reviews</p>
+                </div>
+              </div>
+              <div class="stats">
+                <ul class="stats__list">
+                  <li class="stats__item">
+                    <span class="stats__value">250+</span>
+                    <span class="stats__text">Property<br />Sale</span>
+                  </li>
+                  <li class="stats__item">
+                    <span class="stats__value">550+</span>
+                    <span class="stats__text">Apartment<br />Rent</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-us">
+              <span class="label">ABOUT US</span>
+              <h2 class="about-us__title">
+                How much is your property worth now?
+              </h2>
+              <p class="about-us__text">
+                We have built our reputation as true local area experts. We have
+                gained more knowledge about buyer interests, our neighborhood
+                and the market than any other brand because we live locally and
+                work for local people.
+              </p>
+              <a href="#" class="about-us__link">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="contact">
+        <div class="container">
+          <span class="label">CUSTOMER TESTIMONIAL</span>
+          <div class="reviews__wrapper">
+            <div class="reviews-header">
+              <h2 class="reviews-header__title">What people say about us?</h2>
+              <a class="link-learn_more" href="#"
+                >Learn More
+                <svg
+                  class="link-arrow"
+                  viewBox="0 0 72 72"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="36" cy="36" r="36" fill="#6FC3A3" />
+                  <path
+                    d="M31 24L43 36L31 48"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <ul class="reviews-list">
+              <li class="review-item">
+                <div class="review-item__wrapper">
+                  <h3 class="review-item__quote">
+                    It proved to be exactly the kind of home we wanted.
+                  </h3>
+                  <p class="review-item__text">
+                    We wish to express our thanks for your hard work in finding
+                    us a temporary home, which proved to be exactly what we
+                    wanted.
+                  </p>
+                  <div class="review-author">
+                    <img
+                      src="src/images/persons/person1.webp"
+                      alt="Person"
+                      class="review-author__photo"
+                      width="48"
+                      height="48"
+                    />
+                    <div class="review-author__info">
+                      <h4 class="review-author__name">Jaydon Aminoff</h4>
+                      <p class="review-author__role">UX Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="review-item">
+                <div class="review-item__wrapper">
+                  <h3 class="review-item__quote">
+                    Nobody knows Portland and the peninsula better than David.
+                  </h3>
+                  <p class="review-item__text">
+                    My wife and I had a dream of downsizing from our house in
+                    Cape Elizabeth into a small condo closer to where we work
+                    and play in Portland.
+                  </p>
+                  <div class="review-author">
+                    <img
+                      src="src/images/persons/person2.webp"
+                      alt="Person"
+                      class="review-author__photo"
+                      width="48"
+                      height="48"
+                    />
+                    <div class="review-author__info">
+                      <h4 class="review-author__name">Alfredo Donin</h4>
+                      <p class="review-author__role">UI Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="review-item">
+                <div class="review-item__wrapper">
+                  <h3 class="review-item__quote">
+                    He keeps his client’s best interests in sharp focus
+                  </h3>
+                  <p class="review-item__text">
+                    After working with David to sell my home in 2013, I was
+                    convinced that he’s the only realtor I’ll ever need. Since
+                    then, I’ve bought two properties and sold one.
+                  </p>
+                  <div class="review-author">
+                    <img
+                      src="src/images/persons/person3.webp"
+                      alt="Person"
+                      class="review-author__photo"
+                      width="48"
+                      height="48"
+                    />
+                    <div class="review-author__info">
+                      <h4 class="review-author__name">Makenna Korsgaard</h4>
+                      <p class="review-author__role">UX Researcher</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer-brand">
+            <a href="https://www.google.com/" class="footer-brand__link">
+              <img
+                src="public/logo.svg"
+                alt="Mulih Logo"
+                class="footer-brand__logo"
+                width="40"
+                height="40"
+              />
+              Mulih
+            </a>
+            <p class="footer-brand__text">
+              We have built our reputation as true local area experts.
+            </p>
+            <form class="newsletter">
+              <label for="newsletter__input" class="newsletter__label">
+                Newsletter
+              </label>
+              <div class="newsletter__field">
+                <div class="newsletter__placeholder-wrapper">
+                  <input
+                    type="text"
+                    id="newsletter__input"
+                    class="newsletter__input"
+                    placeholder=""
+                  />
+                  <label for="newsletter__input" class="newsletter__placeholder"
+                    >Enter your email</label
+                  >
+                </div>
+                <button type="submit" class="newsletter__button">Send</button>
+              </div>
+            </form>
+          </div>
+          <div class="footer-nav__wrapper">
+            <div class="footer-nav">
+              <h3 class="footer-nav__title">Service</h3>
+              <ul class="footer-nav__list">
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >Terms & Conditions</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >Privacy & Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-nav footer-nav-margin">
+              <h3 class="footer-nav__title">Community</h3>
+              <ul class="footer-nav__list">
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >Find agents</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >Lifestyle</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.google.com/" class="footer-nav__link"
+                    >Legal notice</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-social">
+              <h3 class="footer-social__title">Follow us on</h3>
+              <ul class="footer-social__list">
+                <li class="footer-social_item">
+                  <a
+                    href="https://www.instagram.com/"
+                    class="footer-social__link"
+                  >
+                    <img
+                      src="public/icons/instagram.svg"
+                      alt="Instagram"
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </li>
+                <li class="footer-social_item">
+                  <a
+                    href="https://www.youtube.com/"
+                    class="footer-social__link"
+                  >
+                    <img
+                      src="public/icons/youtube.svg"
+                      alt="Youtube"
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </li>
+                <li class="footer-social_item">
+                  <a
+                    href="https://www.facebook.com/"
+                    class="footer-social__link"
+                  >
+                    <img
+                      src="public/icons/facebook.svg"
+                      alt="Facebook"
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

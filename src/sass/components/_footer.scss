@@ -1,0 +1,262 @@
+@use "./../utils/mixins" as *;
+
+.footer {
+  padding: 75px 0 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    @include laptop {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+}
+
+.footer-brand {
+  &__link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 108%;
+    letter-spacing: 0.02em;
+    color: #4ba586;
+  }
+
+  &__text {
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0em;
+    color: #1f2744;
+    width: 100%;
+
+    @include laptop {
+      width: 344px;
+    }
+  }
+}
+
+.newsletter {
+  margin-top: 24px;
+
+  &__label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #0b2e29;
+    cursor: pointer;
+  }
+
+  &__placeholder-wrapper {
+    margin-top: 16px;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 70px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    padding: 8px 16px;
+    border: 0;
+
+    @include tablet {
+      width: 350px;
+      height: 60px;
+    }
+
+    @include laptop {
+      width: 263px;
+      height: 42px;
+    }
+
+    &:focus ~ .newsletter__placeholder {
+      top: -17px;
+      left: 10px;
+      background-color: white;
+      color: black;
+    }
+
+    &:not(:placeholder-shown, :focus) {
+      border-radius: 4px;
+      border: 1px solid black;
+    }
+
+    &:not(:placeholder-shown) ~ .newsletter__placeholder {
+      top: -17px;
+      left: 10px;
+      background-color: white;
+      color: black;
+    }
+
+    &:placeholder-shown:not(:focus) ~ .newsletter__placeholder {
+      top: 22px;
+      left: 16px;
+
+      @include tablet {
+        top: 17px;
+      }
+
+      @include laptop {
+        top: 8px;
+      }
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #d7d7d7;
+    cursor: text;
+    padding: 0 3px;
+    transition: all 0.3s ease;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 0;
+    }
+  }
+
+  &__button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #fefeff;
+    box-shadow: 0 0 65px 0 rgba(105, 185, 157, 0.48);
+    background: #69b99d;
+    border: 0;
+    width: 100%;
+    height: 60px;
+
+    @include tablet {
+      width: 130px;
+      height: 60px;
+    }
+
+    @include laptop {
+      width: 88px;
+      height: 42px;
+    }
+  }
+}
+
+.footer-nav {
+  &__wrapper {
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 80px;
+    }
+
+    @include laptop {
+      margin-left: 214px;
+      gap: 0;
+    }
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #0b2e29;
+  }
+
+  &__list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #575757;
+  }
+
+  &__link {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #575757;
+
+    &:hover {
+      color: #000000;
+      filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
+.footer-nav-margin {
+  @include laptop {
+    margin-left: 80px;
+  }
+}
+
+.footer-social {
+  @include laptop {
+    margin-left: 137px;
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #0b2e29;
+  }
+
+  &__list {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f9f9;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e9e8e8;
+    }
+  }
+}

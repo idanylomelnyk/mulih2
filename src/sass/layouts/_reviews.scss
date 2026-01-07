@@ -1,0 +1,120 @@
+@use "./../utils/mixins" as *;
+
+.reviews {
+  background-color: #fefeff;
+  padding-bottom: 120px;
+  scroll-margin-top: 120px;
+}
+
+.reviews-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 16px 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+    color: #054457;
+
+    @include laptop {
+      font-size: 48px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.reviews-list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  justify-content: center;
+}
+
+.review-item {
+  border: 1px solid #dedcda;
+  width: 376px;
+  height: auto;
+
+  &__wrapper {
+    padding: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24;
+      left: 24;
+      width: 42px;
+      height: 34px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="42" height="34" viewBox="0 0 42 34" fill="none"><path d="M0 34V22.625C0 18.375 0.752239 14.4583 2.25672 10.875C3.76119 7.29167 6.31045 3.66667 9.90448 0L16.4239 5.125C14.3343 7.20834 12.7463 9.16667 11.6597 11C10.5731 12.8333 9.86269 14.7083 9.52836 16.625H17.5522V34H0ZM24.4478 34V22.625C24.4478 18.375 25.2 14.4583 26.7045 10.875C28.209 7.29167 30.7582 3.66667 34.3522 0L40.8716 5.125C38.7821 7.20834 37.194 9.16667 36.1075 11C35.0209 12.8333 34.3104 14.7083 33.9761 16.625H42V34H24.4478Z" fill="%23F5F5F5"/></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__quote {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0em;
+    color: #1f2744;
+    margin-top: 62px;
+  }
+
+  &__text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #1f2744;
+    margin-top: 16px;
+  }
+}
+
+.review-author {
+  display: flex;
+  margin-top: 24px;
+  gap: 14px;
+
+  &__photo {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #0b2e29;
+  }
+
+  &__role {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    letter-spacing: 0.04em;
+    color: #767676;
+    margin-left: 2px;
+  }
+}

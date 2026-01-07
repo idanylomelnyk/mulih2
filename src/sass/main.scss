@@ -1,0 +1,15 @@
+@use "./utils/base";
+@use "./utils/container";
+@use "./utils/modern-normalize";
+
+@use "./components/header";
+@use "./components/footer";
+
+@use "./layouts/about";
+@use "./layouts/advante";
+@use "./layouts/discover";
+@use "./layouts/hero";
+@use "./layouts/reviews";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");

@@ -1,0 +1,210 @@
+@use "./../utils/mixins" as *;
+
+.about {
+  padding: 120px 0;
+  background-color: #fefeff;
+  scroll-margin-top: 120px;
+
+  &__wrapper {
+    gap: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      margin: 0 auto;
+      position: relative;
+      width: 609px;
+    }
+
+    @include laptop {
+      margin: 0;
+      width: auto;
+    }
+  }
+}
+
+.rating-image {
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+    width: 609px;
+    height: 475px;
+  }
+}
+
+.rating-badge {
+  display: inline-block;
+  margin-top: 50px;
+  box-shadow: 35px 35px 65px 0 rgba(146, 106, 120, 0.16);
+  background-color: #fefeff;
+
+  @include tablet {
+    position: absolute;
+    margin-top: 0;
+    left: 96px;
+    top: -80px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px 32px 32px;
+  }
+
+  &__score {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 111%;
+    letter-spacing: 0em;
+    color: #054457;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #a6a6a6;
+  }
+
+  &__reviews {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #054457;
+  }
+}
+
+.stats {
+  background-color: #fefeff;
+
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__list {
+    display: flex;
+    padding: 12px 32px;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__value {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 121%;
+    letter-spacing: 0em;
+    color: #054457;
+  }
+
+  &__text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0em;
+    color: #a6a6a6;
+  }
+}
+
+.about-us {
+  margin-top: 30px;
+
+  @include tablet {
+    margin-top: 80px;
+  }
+
+  @include laptop {
+    margin: 0;
+  }
+
+  &__title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+    color: #054457;
+    margin-top: 30px;
+
+    @include laptop {
+      margin-top: 16px;
+      font-size: 48px;
+    }
+  }
+
+  &__text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    letter-spacing: 0em;
+    color: #73788c;
+    margin-top: 16px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #fefeff;
+    padding: 18px 48px;
+    box-shadow: 24px 24px 65px 0 rgba(81, 140, 119, 0.24);
+    background-color: #69b99d;
+    margin-top: 48px;
+    transition: filter 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      filter: drop-shadow(0 0 20px rgba(28, 231, 160, 0.3));
+      background-color: #2dd198;
+    }
+
+    @include laptop {
+      display: inline-block;
+    }
+  }
+}
